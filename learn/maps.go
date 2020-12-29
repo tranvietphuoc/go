@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func map() {
 	m := make(map[string]int)
 
 	m["k1"] = 7
@@ -22,4 +22,5 @@ func main() {
 
 	n := map[string]int{"foo": 1, "bar": 2}
 	fmt.Println("map:", n)
+	fmt.Println("hello Phuoc")
 }

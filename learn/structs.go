@@ -1,4 +1,4 @@
-package main 
+package main
 
 import "fmt"
 
@@ -10,8 +10,8 @@ type Vertex struct {
 var (
 	v1 = Vertex{1, 2}  // has type Vertex
 	v2 = Vertex{X: 1}  // Y: 0 implicit
-	v3 = Vertex{}  // X: 0, Y: 0
-	p = &Vertex{1, 2}  //has type *Vertex
+	v3 = Vertex{}      // X: 0, Y: 0
+	p  = &Vertex{1, 2} //has type *Vertex
 )
 
 func main() {
@@ -20,7 +20,7 @@ func main() {
 	// struct fields
 	// v := Vertex{1, 2}
 	// v.X = 4  // accessing to X using a dot
-	// fmt.Println(v.X)
+	//fmt.Println(v.X)
 
 	// pointer to struct
 	// p := &v

@@ -14,3 +14,4 @@ func main() {
 	*p = *p/37  //divide j through the pointer
 	fmt.Println(j)
 }
+

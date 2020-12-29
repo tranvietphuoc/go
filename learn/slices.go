@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+
 func main() {
 	s := make([]string, 3)
 	fmt.Println("emp:", s)
@@ -21,7 +22,7 @@ func main() {
 
 	c := make([]string, len(s))
 	copy(c, s)
-	fmt.Println("cpy:", c)
+	fmt.Println("copy:", c)
 
 	l := s[2:5]
 	fmt.Println("sl1:", l)
@@ -44,4 +45,43 @@ func main() {
 		}
 	}
 	fmt.Println("2d:", twoD)
+
+	// slice literals
+	q := []int{2, 3, 4, 5, 6, 7}
+	fmt.Println(q)
+
+	r := []bool{true, false, true, false, true, true}
+	fmt.Println(r)
+
+	s1 := []struct {
+			i int
+			b bool
+	}{
+			{2, true},
+			{3, false},
+			{5, true},
+			{7, true},
+			{11, false},
+	}
+
+	fmt.Println(s1)
+
+	// slice default
+	s2 := []int{2, 3, 4, 5, 6,7}
+	fmt.Println(s2[1:4])
+	fmt.Println(s2[:2])
+	fmt.Println(s2[1:])
+
+	// slice len and capacity
+	printSlice(s2[:0])
+	printSlice(s2[:4])
+	printSlice(s2[2:])
+
+	// creating slice with make
+
+}
+
+func printSlice(s []int) {
+	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
+
 }
